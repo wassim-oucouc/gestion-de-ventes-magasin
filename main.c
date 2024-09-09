@@ -1,9 +1,11 @@
 #include <stdio.h>
-void calcul()
-{
-    int count;
+
+int main() {
     int somme;
     somme = 0;
+int max;
+max = 0;
+int min;
     char tableau[50];
     int count;
     printf("entrer le nombre de produits vendu :");
@@ -17,33 +19,19 @@ void calcul()
     }
     for(int i = 0 ; i < count ;i++)
     {
-        somme += somme + tableau[i];
-        printf("Le Total Des Ventes %d",somme);
-}
-}
-int main() {
-    int choix;
-    printf("Que vous souhaitez vous faire ?");
-    printf("1. calculer la total des ventes");
-    printf("3. Afficher les ventes superieures a une moyenne");
-    printf("4. compter le nombre de ventes superieures a 100");
-    printf("5. compter le nombre de ventes inferieures a 100");
-    scanf("%d",&choix);
-    switch(choix){
-        case '1' :
-        calcul();
+        somme +=   tableau[i];
     }
-
-    for(int i = 0 ; i < count ; i++)
+     printf("Le Total Des Vente %d\n",somme);
+for(int i = 0 ; i < count ;i++)
+{
+    if(tableau[i] > max)
     {
-        if(tableau[i] > 0)
-        {
-            max = tableau[i];
-        }
-        else if(tableau[i] < 0)
-        {
-            tableau[i] = min;
-        }
+        max = tableau[i];
+    }
+    min = tableau[0];
+    if(tableau[i] < min)
+    {
+        min = tableau[i];
     }
 }
-
+}
