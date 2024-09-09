@@ -32,6 +32,11 @@ for(int i = 0 ; i < count ;i++)
     if(tableau[i] < min)
     {
         min = tableau[i];
+
     }
 }
+printf("la vente plus elever est : %d\n",max);
+printf("la vente plus bas est : %d\n",min);
 }
+
+
